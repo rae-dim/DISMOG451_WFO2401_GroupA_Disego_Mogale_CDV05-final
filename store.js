@@ -22,17 +22,18 @@ export default class Store {
     }
 }
 
-// Action types
+// Defining cotents for the types of actions
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
 const RESET = "RESET";
 
-// Action creators
+// Defining the action creators
 const increaseAction = () => ({ type: INCREMENT });
 const decreaseAction = () => ({ type: DECREMENT });
 const resetAction = () => ({ type: RESET });
 
-// Reducer function
+// Reducer function that determines how the state of the application changes in response to an action sent to the store
+// switch statement has been used to handle the different types of actions
 const tallyReducer = (state = { tally: 0 }, action) => {
     switch (action.type) {
         case INCREMENT:
